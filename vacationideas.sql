@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `vacationideas`
 --
-CREATE DATABASE IF NOT EXISTS `vacationideas` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `vacationideas`;
+CREATE DATABASE IF NOT EXISTS `railway` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `railway`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +29,7 @@ USE `vacationideas`;
 -- Table structure for table `roles`
 --
 
-CREATE TABLE `railway.roles` (
+CREATE TABLE `roles` (
   `roleId` int(11) NOT NULL,
   `roleName` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -48,7 +48,7 @@ INSERT INTO `roles` (`roleId`, `roleName`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `railway.users` (
+CREATE TABLE `users` (
   `userId` int(11) NOT NULL,
   `firstName` varchar(40) NOT NULL,
   `lastName` varchar(40) NOT NULL,
@@ -74,7 +74,7 @@ INSERT INTO `users` (`userId`, `firstName`, `lastName`, `userName`, `password`, 
 -- Table structure for table `vacations`
 --
 
-CREATE TABLE `railway.vacations` (
+CREATE TABLE `vacations` (
   `vacationId` int(11) NOT NULL,
   `description` varchar(250) NOT NULL,
   `destination` varchar(50) NOT NULL,
@@ -107,7 +107,7 @@ INSERT INTO `vacations` (`vacationId`, `description`, `destination`, `imageName`
 -- Table structure for table `vacationsfollowers`
 --
 
-CREATE TABLE `railway.vacationsfollowers` (
+CREATE TABLE `vacationsfollowers` (
   `vacationId` int(11) NOT NULL,
   `userId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
